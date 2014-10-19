@@ -1,9 +1,92 @@
 <html>
 <head>
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="container">
 
+        <!-- Top Nav start -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ContraJD</a>
+                </div>
+            </div>
+        </nav> 
+        <!-- Top Nav end -->
+
+        <!-- Side Nav start -->
+        <div class="col-md-2">
+            <ul class="nav nav-stacked nav-pills">
+                <li class="active"><a href="#intro" role="tab" data-toggle="tab">Intro</a></li>
+                <li><a href="#personal-info" role="tab" data-toggle="tab">Personal Info</a></li>
+                <li><a href="#">Eligibility</a></li>
+                <li><a href="#">Pick Program</a></li>
+                <li><a href="#">Walkthrough</a></li>
+                <li><a href="#">Review</a></li>
+                <li><a href="#">File</a></li>
+                <li><a href="#">Save & Exit</a></li>
+            </ul>
+        </div>
+        <!-- Side Nav end -->
+
+        <!-- Middle content start -->
+        <div class="col-md-6">
+            <div class="tab-content">
+                <div id="intro" class="tab-pane active">
+                    <h1>Mother fucking intro to contraJD goes here.</h1>
+                </div>
+                <div id="personal-info" class="tab-pane">
+                    Personal info content goes here.
+                </div>
+            </div>
+        </div>
+        <!-- Middle content end -->
+
+        <!-- Watson panel start -->
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Ask</button>
+                </span>
+            </div>
+
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">Staff Picks</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">Top</button>
+                </div>
+            </div>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Suggestion 1</h4>
+                </a>
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Suggestion 2</h4>
+                </a>
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Suggestion 3</h4>
+                </a>
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Suggestion 4</h4>
+                </a>
+
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Suggestion 5</h4>
+                </a>
+            </div>                
+        </div>
+        <!-- Watson panel end -->
+    </div>
 </body>
 </html>
