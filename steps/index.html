@@ -1,92 +1,93 @@
-<html>
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="container">
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>ContraJD</title>
+        <link rel="stylesheet" href="../static/css/foundation.css" />
+        <link rel="stylesheet" href="static/css/steps.css" />
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/slidebars.min.css">
+        <script src="../static/js/vendor/modernizr.js"></script>
+    </head>
 
-        <!-- Top Nav start -->
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">ContraJD</a>
-                </div>
-            </div>
-        </nav> 
-        <!-- Top Nav end -->
-
-        <!-- Side Nav start -->
-        <div class="col-md-2">
-            <ul class="nav nav-stacked nav-pills">
-                <li class="active"><a href="#intro" role="tab" data-toggle="tab">Intro</a></li>
-                <li><a href="#personal-info" role="tab" data-toggle="tab">Personal Info</a></li>
-                <li><a href="#">Eligibility</a></li>
-                <li><a href="#">Pick Program</a></li>
-                <li><a href="#">Walkthrough</a></li>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">File</a></li>
-                <li><a href="#">Save & Exit</a></li>
+    <body>
+        <div class="top sticky">
+        <nav class="top-bar sticky" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">ContraJD</a></h1>
+                </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
+            <section class="top-bar-section">
+              <!-- Right Nav Section -->
+              <ul class="right">
+                  <li class="active"><a href="#">Save</a></li>
+                  <li class="has-dropdown">
+                      <a href="#">Demo User</a>
+                      <ul class="dropdown">
+                          <li><a href="#">Profile Settings</a></li>
+                          <li class="active"><a href="#">Sign Out</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="sb-toggle-right toggle-watson">
+                        <i class="fa fa-angle-double-left"></i>
+                    </a>
+                  </li>
+              </ul>
+            </section>
+        </nav>
         </div>
-        <!-- Side Nav end -->
 
-        <!-- Middle content start -->
-        <div class="col-md-6">
-            <div class="tab-content">
-                <div id="intro" class="tab-pane active">
-                    <h1>Mother fucking intro to contraJD goes here.</h1>
-                </div>
-                <div id="personal-info" class="tab-pane">
-                    Personal info content goes here.
+        <div id="sb-site">
+            <dl class="tabs vertical medium-2 columns" data-tab>
+              <dd class="active"><a href="#intro-panel">Intro</a></dd>
+              <dd><a href="#personal-info-panel">Personal Info</a></dd>
+              <dd><a href="#eligibility-panel">Eligibility</a></dd>
+              <dd><a href="#pick-program-panel">Pick Program</a></dd>
+              <dd><a href="#walkthrough-panel">Walkthrough</a></dd>
+              <dd><a href="#upload-panel">Upload Documents</a></dd>
+              <dd><a href="#review-panel">Review</a></dd>
+              <dd><a href="#file-panel">File</a></dd>
+            </dl>
+            <div class="medium-9 columns">
+                <div class="tabs-content">
+                  <div class="content active" id="intro-panel">
+                      <p>This is the mother fucking intro</p>
+                  </div>
+                  <div class="content" id="personal-info-panel">
+                      <p>Give me some of your mother fucking info</p>
+                  </div>
                 </div>
             </div>
         </div>
-        <!-- Middle content end -->
-
-        <!-- Watson panel start -->
-        <div class="col-md-4">
-            <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Ask</button>
-                </span>
-            </div>
-
-            <div class="btn-group btn-group-justified">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default">Staff Picks</button>
+        <div class="sb-slidebar sb-right sb-style-overlay sb-width-wide">
+            <div class="watson-panel">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h3>Ask Watson</h3>
+                    </div>
                 </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default">Top</button>
+                <div class="row">
+                    <div class="large-10 columns">
+                       <input type="text"> 
+                    </div>
+                    <div class="large-2 columns">
+                        <a href="#" class="button postfix">Ask</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="list-group">
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Suggestion 1</h4>
-                </a>
-
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Suggestion 2</h4>
-                </a>
-
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Suggestion 3</h4>
-                </a>
-
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Suggestion 4</h4>
-                </a>
-
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Suggestion 5</h4>
-                </a>
-            </div>                
         </div>
-        <!-- Watson panel end -->
-    </div>
-</body>
+
+        <script src="../static/js/vendor/jquery.js"></script>
+        <script src="../static/js/foundation.min.js"></script>
+        <script src="../static/js/vendor/slidebars.min.js"></script>
+        <script src="static/js/steps.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
 </html>
