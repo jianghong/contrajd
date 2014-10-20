@@ -10,7 +10,8 @@ def hello_world():
 @app.route('/ask')
 def post_question():
 	question = request.args.get('q', '')
-	return watson.ask_watson(question)
+	resp = watson.ask_watson(question)
+	return (resp.text, resp.status_code, resp.headers.items())
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)
