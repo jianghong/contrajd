@@ -5,6 +5,7 @@ function AnswerCard() {
 }
 
 
+
 var answerCardModule = angular.module('answerCard', []);
 
 answerCardModule.controller('AnswerCardController', function($scope) {
@@ -13,12 +14,19 @@ answerCardModule.controller('AnswerCardController', function($scope) {
   $scope.addAnswer = function() {
       $scope.answerCards.push(new AnswerCard());
   }
-})
+});
 
 answerCardModule.directive('myAnswers', function(){
+  var answerCardTemplate = '<div class="row">' +
+                                '<div class="large-12 columns">' + 
+                                    '<div class="answer-card">' +
+                                        '{{aCard.answer}} {{aCard.sourceUrl}}' + 
+                                    '</div>' +
+                                '</div>' + 
+                            '</div>';
   return {
       restrict: 'A',
-      template: '<div class="answer-card">{{aCard.answer}} {{aCard.sourceUrl}}</div>',
+      template: answerCardTemplate,
       replace: true,
       transclude: false,
       scope: {

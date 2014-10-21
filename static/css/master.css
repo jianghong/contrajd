@@ -1,5 +1,6 @@
 .answer-card {
-    width: 500px;
-    height: 500px;
-    background-color: red;
+  background-color: #fff;
+  margin-bottom: 10px !important;
+  padding: 50px;
+  height: 150px;
 }
