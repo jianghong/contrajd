@@ -38,7 +38,7 @@
           <div class="medium-7 columns">
               <br>
               <h1>ContraJD</h1>
-              <h3>The immigration research tool powered by IBM Watson</h3>
+              <h3>The immigration research tool powered by IBM Watson.</h3>
               <br>
           </div>
 
@@ -60,10 +60,10 @@
                   </div>
                   <div class="row collapse">
                       <div class="medium-11 columns">
-                          <input type="text" name="" placeholder="For example: How do I immigrate to Canada?">
+                          <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?">
                       </div>
                       <div class="medium-1 columns">
-                          <input type="submit" href="#" class="postfix small button expand" value="Ask">
+                          <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask">
                       </div>
                   </div>
               </div>
@@ -81,11 +81,6 @@
 
       <div class="row display">
           <div id="contrajd-suggestions" class="medium-5 columns medium-centered">
-              <h5>How do I get a study permit in Canada?</h5>
-              <h5>How do I get a study permit in Canada?</h5>
-              <h5>How do I get a study permit in Canada?</h5>
-              <h5>How do I get a study permit in Canada?</h5>
-              <h5>How do I get a study permit in Canada?</h5>
           </div>
       </div>
   </section>
@@ -96,27 +91,12 @@
     
   <script src="static/js/vendor/jquery.js"></script>
   <script src="static/js/foundation.min.js"></script>
+  <script src="static/helpers.js"></script>
+  <script src="static/handlers.js"></script>
   <script>
-    $(document).foundation();
-
     $(document).ready(function() {
-        $("#contrajd-picks, #contrajd-top").click(function(event) {
-            event.preventDefault();
-            var $this = $(this);
-
-            if($this.is("contrajd-current")) {
-                return;
-            } else {
-                if($this.attr("id") === "contrajd-picks") {
-                    $this.addClass("contrajd-current");
-                    $("#contrajd-top").removeClass("contrajd-current");
-                }
-                else if($this.attr("id") === "contrajd-top") {
-                    $this.addClass("contrajd-current");
-                    $("#contrajd-picks").removeClass("contrajd-current");
-                }
-            }
-        });
+        $(document).foundation();
+        init();
     });
   </script>
   </body>
