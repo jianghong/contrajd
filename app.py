@@ -11,8 +11,8 @@ def hello_world():
 def post_question():
 	question = request.args.get('q', '')
 	resp = watson.ask_watson(question)
-	return (resp.text, resp.status_code, resp.headers.items())
+	return (resp)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(debug=True)
 
