@@ -2,7 +2,7 @@ var init = function() {
   showStaffPicks();
 
   $(".contrajd-ask").click(function() {
-    var question = "";
+    var question = $(".contrajd-input-box").val();
     askWatson(question); // <-- async
   });
 

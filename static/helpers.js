@@ -35,6 +35,6 @@ var showTopPicks = function() {
   }
 };
 
-var askWatson = function() {
-
+var askWatson = function(question) {
+  console.log(question);
 };
