@@ -1,6 +1,11 @@
 var init = function() {
   showStaffPicks();
 
+  $(".contrajd-ask").click(function() {
+    var question = "";
+    askWatson(question); // <-- async
+  });
+
   $(".contrajd-suggestion").unbind();
   $(".contrajd-suggestion").click(function() {
     var $this = this;

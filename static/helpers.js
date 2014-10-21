@@ -1,17 +1,17 @@
 var suggestions = {
   "staffPicks": [
-    "How do I get a study permit in Canada?",
-    "How do I get a study permit in Canada?",
-    "How do I get a study permit in Canada?",
-    "How do I get a study permit in Canada?",
-    "How do I get a study permit in Canada?"
+    "Staff Picks: Suggestion 1",
+    "Staff Picks: Suggestion 2",
+    "Staff Picks: Suggestion 3",
+    "Staff Picks: Suggestion 4",
+    "Staff Picks: Suggestion 5"
   ],
   "topPicks": [
-    "How do I get a work permit in Canada?",
-    "How do I get a work permit in Canada?",
-    "How do I get a work permit in Canada?",
-    "How do I get a work permit in Canada?",
-    "How do I get a work permit in Canada?"
+    "Top Picks: Suggestion 1",
+    "Top Picks: Suggestion 2",
+    "Top Picks: Suggestion 3",
+    "Top Picks: Suggestion 4",
+    "Top Picks: Suggestion 5"
   ]
 };
 
