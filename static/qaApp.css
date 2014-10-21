@@ -1,0 +1,80 @@
+body {
+    background: #f4f4f4;
+}
+
+#contrajd-banner-large {
+    background: #f4f4f4;
+    padding: 40px 0;
+}
+
+#homepage-hero h1, #homepage-hero h3 {
+    color: white;
+}
+.contrajd-vertical {
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    border: 1px solid red;
+}
+
+.contrajd-justify-text {
+    text-align: center;
+}
+
+.contrajd-well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+.contrajd-segment {
+    font-size: 16px;
+    padding: 5px 18px;
+    margin: 0;
+    display: block;
+    font-weight: bold;
+    color:rgba(0,0,0,0.4);
+}
+
+.contrajd-current {
+    background:rgba(0,0,0,0.4);
+    color: white;
+}
+
+a:hover {
+    color: lightgrey !important;
+}
+
+#contrajd-suggestions h5 {
+    text-align: center;
+}
+
+footer .contrajd-copyright {
+    padding-left: 24px;
+    margin: 6px 0 0;
+    font-size: 0.75em;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    line-height: 50px;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+    background: #f4f4f4;
+}
+
+#homepage-hero {
+    background-size: 100% 500px;
+    background-image: url("static/img/hero.jpg");
+    padding: 90px;
+}
+
+.contrajd-slogan {
+    background-color: rgba(0, 0, 0, 0.6);
+}

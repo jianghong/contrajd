@@ -1,186 +1,86 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="qaApp">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ContraJD</title>
     <link rel="stylesheet" href="static/css/foundation.css" />
+    <link rel="stylesheet" href="static/qaApp.css" />
     <script src="static/js/vendor/modernizr.js"></script>
   </head>
-  <body>
 
-  <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-          <li class="name">
-              <h1><a href="#">ContraJD</a></h1>
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
+  <body ng-controller="mainController">
 
-      <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-              <li class="active"><a href="#">Apply</a></li>
-              <li class="has-dropdown">
-                  <a href="#">Demo User</a>
-                  <ul class="dropdown">
-                      <li><a href="#">Profile Settings</a></li>
-                      <li class="active"><a href="#">Sign Out</a></li>
-                  </ul>
+      <nav class="top-bar" data-topbar role="navigation">
+          <ul class="title-area">
+              <li class="name">
+                  <h1><a href="#">ContraJD</a></h1>
               </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
-      </section>
-  </nav>
 
-  <!--<section id="homepage-hero">-->
-      <!--<div class="row">-->
-          <!--<div class="medium-7 columns contrajd-slogan">-->
-              <!--<br>-->
-              <!--<h1>ContraJD</h1>-->
-              <!--<h3>The immigration research tool powered by IBM Watson.</h3>-->
-              <!--<br>-->
-          <!--</div>-->
+          <section class="top-bar-section">
+              <ul class="right">
+                  <li class="active"><a href="#">Apply</a></li>
+                  <li class="has-dropdown">
+                      <a href="#">Demo User</a>
+                      <ul class="dropdown">
+                          <li><a href="#">Profile Settings</a></li>
+                          <li class="active"><a href="#">Sign Out</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </section>
+      </nav>
 
-          <!--<div class="medium-5 columns">-->
-              <!--<div class="logo">-->
-                  <!--<!--<img src="http://placehold.it/500x300">-->
-              <!--</div>-->
-          <!--</div>-->
-      <!--</div>-->
-  <!--</section>-->
-
-  <section id="contrajd-banner-large">
-      <div class="row">
-          <div class="row collapse">
-              <div class="medium-8 columns medium-centered">
-                  <div class="medium-11 columns medium-centered">
-                      <h4 class="subheader contrajd-justify-text">We aim to provide you with answers regarding your immigration questions. Why don't you give us a try? </h4>
-                      <br>
-                  </div>
-                  <div class="row collapse">
-                      <div class="medium-11 columns">
-                          <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?">
+      <section id="contrajd-banner-large" >
+          <div class="row">
+              <div class="row collapse">
+                  <div class="medium-8 columns medium-centered">
+                      <div class="medium-11 columns medium-centered">
+                          <h4 class="subheader contrajd-justify-text">We aim to provide you with answers regarding your immigration questions. Why don't you give us a try?</h4>
+                          <br>
                       </div>
-                      <div class="medium-1 columns">
-                          <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask">
+                      <div class="row collapse">
+                          <div class="medium-11 columns">
+                              <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
+                          </div>
+                          <div class="medium-1 columns">
+                              <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask">
+                          </div>
                       </div>
                   </div>
               </div>
           </div>
-      </div>
 
-      <div class="row display">
-          <div class="medium-3 columns medium-centered">
-              <ul class="contrajd-list inline-list">
-                  <li><a href="#" id="contrajd-picks" class="contrajd-current contrajd-segment">Staff Picks</a></li>
-                  <li><a href="#" id="contrajd-top" class="contrajd-segment">Top</a></li>
-              </ul>
+          <div class="row display">
+              <div class="medium-3 columns medium-centered">
+                  <ul class="contrajd-list inline-list">
+                      <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
+                      <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
+                  </ul>
+              </div>
           </div>
-      </div>
 
-      <div class="row display">
-          <div id="contrajd-suggestions" class="medium-5 columns medium-centered">
+          <div class="row display">
+              <div id="contrajd-suggestions" class="medium-5 columns medium-centered" ng-repeat="suggestion in currentSuggestions">
+                  <h5><a class='contrajd-suggestion' href='javascript:void(0);' ng-click="updateInput(suggestion)"> {{suggestion}} </a></h5>
+              </div>
           </div>
-      </div>
-  </section>
+      </section>
 
-  <footer>
-      <p class="contrajd-copyright">© 2014 ContraJD, Inc. All rights reserved.</p>
-  </footer>
-    
-  <script src="static/js/vendor/jquery.js"></script>
-  <script src="static/js/foundation.min.js"></script>
-  <script src="static/helpers.js"></script>
-  <script src="static/handlers.js"></script>
-  <script>
-    $(document).ready(function() {
-        $(document).foundation();
-        init();
-    });
-  </script>
+      <footer>
+          <p class="contrajd-copyright">© 2014 ContraJD, Inc. All rights reserved.</p>
+      </footer>
+
+      <script src="static/js/vendor/jquery.js"></script>
+      <script src="static/js/foundation.min.js"></script>
+      <script src="static/js/vendor/angular.js"></script>
+      <script src="static/qaApp.js"></script>
+      <script>
+        $(document).ready(function() {
+            $(document).foundation();
+        });
+      </script>
   </body>
 </html>
-
-<style>
-    body {
-        background: #f4f4f4;
-    }
-
-    #contrajd-banner-large {
-        background: #f4f4f4;
-        padding: 40px 0;
-    }
-
-    #homepage-hero h1, #homepage-hero h3 {
-        color: white;
-    }
-    .contrajd-vertical {
-        display: table-cell;
-        vertical-align: middle;
-        height: 50px;
-        border: 1px solid red;
-    }
-
-    .contrajd-justify-text {
-        text-align: center;
-    }
-
-    .contrajd-well {
-        min-height: 20px;
-        padding: 19px;
-        margin-bottom: 20px;
-        background-color: #f5f5f5;
-        border: 1px solid #e3e3e3;
-        border-radius: 4px;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-    }
-
-    .contrajd-segment {
-        font-size: 16px;
-        padding: 5px 18px;
-        margin: 0;
-        display: block;
-        font-weight: bold;
-        color:rgba(0,0,0,0.4);
-    }
-
-    .contrajd-current {
-        background:rgba(0,0,0,0.4);
-        color: white;
-    }
-
-    a:hover {
-        color: lightgrey !important;
-    }
-
-    #contrajd-suggestions h5 {
-        text-align: center;
-    }
-
-    footer .contrajd-copyright {
-        padding-left: 24px;
-        margin: 6px 0 0;
-        font-size: 0.75em;
-        height: 50px;
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        line-height: 50px;
-        color: #aaa;
-        text-align: center;
-        width: 100%;
-        background: #f4f4f4;
-    }
-
-    #homepage-hero {
-        background-size: 100% 500px;
-        background-image: url("static/img/hero.jpg");
-        padding: 90px;
-    }
-
-    .contrajd-slogan {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-</style>
