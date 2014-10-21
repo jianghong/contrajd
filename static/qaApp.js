@@ -1,4 +1,4 @@
-var qaApp = angular.module('qaApp', []);
+var qaApp = angular.module('qaApp', ['answerCard']);
 qaApp.controller('mainController', function($scope) {
 
     $scope.suggestions = {
@@ -18,6 +18,8 @@ qaApp.controller('mainController', function($scope) {
       ]
     };
 
+  $scope.answers = [];
+
   $scope.currentSuggestions = $scope.suggestions.staffPicks;
   $scope.currentPick = "staffPicks";
   $scope.pickedSuggestion = "";
@@ -30,4 +32,8 @@ qaApp.controller('mainController', function($scope) {
   $scope.updateInput = function(suggestion) {
     $scope.pickedSuggestion = suggestion;
   };
+
+  $scope.getAnswers = function() {
+    return $scope.answers;
+  }
 });
