@@ -1,15 +1,23 @@
 .sb-right {
-    margin-top: 45px !important;
+  margin-top: 45px !important;
 }
 
 .sb-slidebar {
-    background-color: #333333 !important;
+  background-color: #333333 !important;
 }
 
 .watson-panel {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .watson-panel h3 {
-    color: white;
+  color: white;
+}
+
+.bottom-bar{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: white;
 }
