@@ -12,7 +12,7 @@
   <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
           <li class="name">
-              <!--<h1><a href="#">ContraJD</a></h1>-->
+              <h1><a href="#">ContraJD</a></h1>
           </li>
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -33,22 +33,22 @@
       </section>
   </nav>
 
-  <section id="homepage-hero">
-      <div class="row">
-          <div class="medium-7 columns contrajd-slogan">
-              <br>
-              <h1>ContraJD</h1>
-              <h3>The immigration research tool powered by IBM Watson.</h3>
-              <br>
-          </div>
+  <!--<section id="homepage-hero">-->
+      <!--<div class="row">-->
+          <!--<div class="medium-7 columns contrajd-slogan">-->
+              <!--<br>-->
+              <!--<h1>ContraJD</h1>-->
+              <!--<h3>The immigration research tool powered by IBM Watson.</h3>-->
+              <!--<br>-->
+          <!--</div>-->
 
-          <div class="medium-5 columns">
-              <div class="logo">
-                  <!--<img src="http://placehold.it/500x300">-->
-              </div>
-          </div>
-      </div>
-  </section>
+          <!--<div class="medium-5 columns">-->
+              <!--<div class="logo">-->
+                  <!--<!--<img src="http://placehold.it/500x300">-->
+              <!--</div>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</section>-->
 
   <section id="contrajd-banner-large">
       <div class="row">
@@ -103,6 +103,10 @@
 </html>
 
 <style>
+    body {
+        background: #f4f4f4;
+    }
+
     #contrajd-banner-large {
         background: #f4f4f4;
         padding: 40px 0;
@@ -155,16 +159,19 @@
         text-align: center;
     }
 
-    footer {
-        background: #333;
-        padding: 24px 0 10px;
-    }
-
     footer .contrajd-copyright {
         padding-left: 24px;
         margin: 6px 0 0;
         font-size: 0.75em;
-        color: #666;
+        height: 50px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        line-height: 50px;
+        color: #aaa;
+        text-align: center;
+        width: 100%;
+        background: #f4f4f4;
     }
 
     #homepage-hero {
