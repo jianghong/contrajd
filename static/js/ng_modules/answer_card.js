@@ -4,17 +4,23 @@ function AnswerCard(question) {
   this.sourceUrl = 'www.google.com';
 }
 
-
-
 var answerCardModule = angular.module('answerCard', []);
 
-answerCardModule.controller('AnswerCardController', function($scope) {
+answerCardModule.controller('AnswerCardController', ['$scope', '$http', function($scope, $http) {
   $scope.answerCards = [];
+  $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
 
   $scope.askWatson = function(question) {
-      $scope.answerCards.push(new AnswerCard(question));
+    $http.get($scope.watsonRoute, {params: {q: question}}).
+    success(function(data, status, headers, config) {
+      console.log(data);
+    }).
+    error(function(data, status, headers, config) {
+      console.error(data);
+    });
+    $scope.answerCards.push(new AnswerCard(question));
   }
-});
+}]);
 
 answerCardModule.directive('myAnswers', function(){
   var answerCardTemplate = '<div class="row">' +
