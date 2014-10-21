@@ -1,11 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="stepsApp">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>ContraJD</title>
         <link rel="stylesheet" href="../static/css/foundation.css" />
         <link rel="stylesheet" href="static/css/steps.css" />
+        <link rel="stylesheet" href="../static/css/master.css" />
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../static/css/slidebars.min.css">
         <script src="../static/js/vendor/modernizr.js"></script>
@@ -64,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="sb-slidebar sb-right sb-style-overlay sb-width-wide">
+        <div ng-controller="AnswerCardController" class="sb-slidebar sb-right sb-style-overlay sb-width-wide">
             <div class="watson-panel">
                 <div class="row">
                     <div class="large-12 columns">
@@ -76,7 +77,12 @@
                        <input type="text"> 
                     </div>
                     <div class="large-2 columns">
-                        <a href="#" class="button postfix">Ask</a>
+                        <a ng-click="addAnswer()" href="#" class="button postfix">Ask</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div  class="large-12 columns">
+                        <div ng-repeat="answer in answerCards" my-answers="answer"></div>
                     </div>
                 </div>
             </div>
@@ -85,9 +91,12 @@
         <script src="../static/js/vendor/jquery.js"></script>
         <script src="../static/js/foundation.min.js"></script>
         <script src="../static/js/vendor/slidebars.min.js"></script>
-        <script src="static/js/steps.js"></script>
+        <script src="../static/js/vendor/angular.js"></script>
+        <script src="../static/js/ng-modules/answer-card.js"></script>
+        <script src="static/js/stepsApp.js"></script>
         <script>
             $(document).foundation();
+            $.slidebars();
         </script>
     </body>
 </html>
