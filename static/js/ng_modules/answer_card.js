@@ -1,5 +1,5 @@
-function AnswerCard() {
-  this.answer = 'Just use google dipshit';
+function AnswerCard(question) {
+  this.answer = question;
   this.confidence = '99%';
   this.sourceUrl = 'www.google.com';
 }
@@ -11,8 +11,8 @@ var answerCardModule = angular.module('answerCard', []);
 answerCardModule.controller('AnswerCardController', function($scope) {
   $scope.answerCards = [];
 
-  $scope.addAnswer = function() {
-      $scope.answerCards.push(new AnswerCard());
+  $scope.askWatson = function(question) {
+      $scope.answerCards.push(new AnswerCard(question));
   }
 });
 
