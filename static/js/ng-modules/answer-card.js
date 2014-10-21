@@ -1,5 +1,5 @@
 function AnswerCard() {
-  this.answer = 'Answer';
+  this.answer = 'Just use google dipshit';
   this.confidence = '99%';
   this.sourceUrl = 'www.google.com';
 }
