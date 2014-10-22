@@ -13,3 +13,15 @@
   width: auto;
   overflow: hidden;
 }
+
+.answer-card-confidence {
+  padding: 40px;
+  padding-left: 50px;
+  float: left;
+}
+
+.answer-card-source-url {
+  padding: 40px;
+  padding-left: 50px;
+  float: right;
+}
