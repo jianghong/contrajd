@@ -22,7 +22,7 @@
 
           <section class="top-bar-section">
               <ul class="right">
-                  <li class="active"><a href="#">Apply</a></li>
+                  <li class="active"><a href="#" class="contrajd-apply">Apply</a></li>
                   <li class="has-dropdown">
                       <a href="#">Demo User</a>
                       <ul class="dropdown">
@@ -55,21 +55,28 @@
                   </div>
               </div>
 
-              <div class="row display">
-                  <div class="medium-3 columns medium-centered">
-                      <ul class="contrajd-list inline-list">
-                          <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
-                          <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
-                      </ul>
+              <div class="contrajd-suggestion-engine" ng-controller="SuggestionEngineController" ng-show="isShowingSuggestion">
+                  <div class="row display">
+                      <div class="small-6 medium-3 columns small-centered medium-centered large-centered">
+                          <ul class="contrajd-list inline-list">
+                              <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
+                              <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <div class="row display">
+                      <div id="contrajd-suggestions" class="medium-5 columns medium-centered" ng-repeat="suggestion in currentSuggestions">
+                          <h5><a class='contrajd-suggestion' href='javascript:void(0);' ng-click="updateInput(suggestion)"> {{suggestion}} </a></h5>
+                      </div>
                   </div>
               </div>
 
-              <div class="row display">
-                  <div id="contrajd-suggestions" class="medium-5 columns medium-centered" ng-repeat="suggestion in currentSuggestions">
-                      <h5><a class='contrajd-suggestion' href='javascript:void(0);' ng-click="updateInput(suggestion)"> {{suggestion}} </a></h5>
-                  </div>
+              <div ng-show="!isShowingSuggestion" class="medium-3 columns medium-centered" ng-click="resetQA()">
+                  <ul class="contrajd-list">
+                      <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
+                  </ul>
               </div>
-
               <div ng-repeat="answer in answerCards" my-answers="answer"></div>
           </section>
       </div> <!-- AnswerCardController Ends Here -->
@@ -81,8 +88,10 @@
       <script src="static/js/vendor/jquery.js"></script>
       <script src="static/js/foundation.min.js"></script>
       <script src="static/js/vendor/angular.js"></script>
-      <script src="static/js/ng_modules/answer_card.js"></script>
       <script src="static/qaApp.js"></script>
+      <script src="static/js/ng_modules/answerCardController.js"></script>
+      <script src="static/js/ng_modules/services/suggestionEngineService.js"></script>
+      <script src="static/js/ng_modules/suggestionEngineController.js"></script>
       <script>
         $(document).ready(function() {
             $(document).foundation();
