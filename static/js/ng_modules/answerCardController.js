@@ -20,10 +20,6 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
       console.error(data);
     });
     $scope.answerCards.push(new AnswerCard(question));
-    $scope.answerCards.push(new AnswerCard(question));
-    $scope.answerCards.push(new AnswerCard(question));
-    $scope.answerCards.push(new AnswerCard(question));
-    $scope.answerCards.push(new AnswerCard(question));
 
     $scope.$parent.hideSuggestions();
   }

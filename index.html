@@ -72,7 +72,7 @@
                   </div>
               </div>
 
-              <div ng-show="!isShowingSuggestion" class="medium-2 columns medium-centered" ng-click="resetQA()">
+              <div ng-show="!isShowingSuggestion" class="medium-3 columns medium-centered" ng-click="resetQA()">
                   <ul class="contrajd-list">
                       <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
                   </ul>
@@ -88,8 +88,10 @@
       <script src="static/js/vendor/jquery.js"></script>
       <script src="static/js/foundation.min.js"></script>
       <script src="static/js/vendor/angular.js"></script>
-      <script src="static/js/ng_modules/answer_card.js"></script>
       <script src="static/qaApp.js"></script>
+      <script src="static/js/ng_modules/answerCardController.js"></script>
+      <script src="static/js/ng_modules/services/suggestionEngineService.js"></script>
+      <script src="static/js/ng_modules/suggestionEngineController.js"></script>
       <script>
         $(document).ready(function() {
             $(document).foundation();
