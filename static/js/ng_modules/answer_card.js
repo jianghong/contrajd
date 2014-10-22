@@ -1,5 +1,5 @@
-function AnswerCard(question) {
-  this.answer = question;
+function AnswerCard() {
+  this.answer = "Google that shit";
   this.confidence = '99%';
   this.sourceUrl = 'www.google.com';
 }
@@ -20,6 +20,11 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
       console.error(data);
     });
     $scope.answerCards.push(new AnswerCard(question));
+    $scope.answerCards.push(new AnswerCard(question));
+    $scope.answerCards.push(new AnswerCard(question));
+    $scope.answerCards.push(new AnswerCard(question));
+    $scope.answerCards.push(new AnswerCard(question));
+
     $scope.$parent.hideSuggestions();
   }
 

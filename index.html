@@ -57,7 +57,7 @@
 
               <div class="contrajd-suggestion-engine" ng-controller="SuggestionEngineController" ng-show="isShowingSuggestion">
                   <div class="row display">
-                      <div class="medium-3 columns medium-centered">
+                      <div class="small-6 medium-3 columns small-centered medium-centered large-centered">
                           <ul class="contrajd-list inline-list">
                               <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
                               <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
@@ -72,7 +72,11 @@
                   </div>
               </div>
 
-              <div ng-show="!isShowingSuggestion"><button ng-click="resetQA()">Back</button> {{pickedSuggestion}}</div>
+              <div ng-show="!isShowingSuggestion" class="medium-2 columns medium-centered" ng-click="resetQA()">
+                  <ul class="contrajd-list">
+                      <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
+                  </ul>
+              </div>
               <div ng-repeat="answer in answerCards" my-answers="answer"></div>
           </section>
       </div> <!-- AnswerCardController Ends Here -->
