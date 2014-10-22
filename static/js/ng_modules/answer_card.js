@@ -11,6 +11,7 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
   $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
 
   $scope.askWatson = function(question) {
+    $scope.answerCards = []; // Reset
     $http.get($scope.watsonRoute, {params: {q: question}}).
     success(function(data, status, headers, config) {
       console.log(data);
@@ -19,6 +20,12 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
       console.error(data);
     });
     $scope.answerCards.push(new AnswerCard(question));
+    $scope.$parent.hideSuggestions();
+  }
+
+  $scope.resetQA = function() {
+    $scope.answerCards = [];
+    $scope.$parent.showSuggestions();
   }
 }]);
 
