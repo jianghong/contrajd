@@ -62,8 +62,22 @@
                     <div class="content" id="personal-info-panel">
                         <p>Give me some of your mother fucking info</p>
                     </div>
-                    <div class="content" id="walkthrough-panel">
+                    <div ng-controller="WalkthroughController" class="content" id="walkthrough-panel">
+                        <div class="row">
+                            <div class="large-6 columns">
+                               >>  Step {{ currentPage + 1}} / {{ maxPages }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div ng-include="templateUrl"></div>
+                            </div>
+                        </div>
                         <div class="walkthrough-nav">
+                            <nav role="navigation">
+                                <li ng-show="hasBack"><a ng-click="changePage('left')">Back</a></li>
+                                <li ng-show="hasNext"><a ng-click="changePage('right')">Next</a></li>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -78,10 +92,10 @@
                 </div>
                 <div class="row">
                     <div class="large-10 columns">
-                       <input type="text"> 
+                       <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
                     </div>
                     <div class="large-2 columns">
-                        <a ng-click="addAnswer()" href="#" class="button postfix">Ask</a>
+                        <a ng-click="askWatson(pickedSuggestion)" href="#" class="button postfix">Ask</a>
                     </div>
                 </div>
                 <div class="row">
@@ -98,6 +112,7 @@
         <script src="../static/js/vendor/angular.js"></script>
         <script src="../static/js/ng_modules/answerCardController.js"></script>
         <script src="static/js/stepsApp.js"></script>
+        <script src="static/js/walkthroughController.js"></script>
         <script>
             $(document).foundation();
             $.slidebars();
