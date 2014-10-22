@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     background: #f4f4f4;
 }
@@ -66,7 +70,7 @@ footer .contrajd-copyright {
     color: #aaa;
     text-align: center;
     width: 100%;
-    background: #f4f4f4;
+    background-color: #333333;
 }
 
 #homepage-hero {
@@ -77,4 +81,9 @@ footer .contrajd-copyright {
 
 .contrajd-slogan {
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+.contrajd-list {
+    list-style-type: none;
+    text-align: center;
 }
