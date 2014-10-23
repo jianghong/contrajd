@@ -1,4 +1,4 @@
-var qaApp = angular.module('qaApp', ['answerCard']);
+var qaApp = angular.module('qaApp', ['answerCard', 'angularSpinner']);
 qaApp.controller('mainController', function($scope) {
   $scope.pickedSuggestion = "";
   $scope.isShowingSuggestion = true;
