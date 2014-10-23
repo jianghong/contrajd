@@ -3,11 +3,11 @@ qaApp.factory('suggestionEngineService', function(){
     getSuggestions: function() {
       var suggestions = {
         "staffPicks": [
-          "Staff Picks: Suggestion 1",
-          "Staff Picks: Suggestion 2",
-          "Staff Picks: Suggestion 3",
-          "Staff Picks: Suggestion 4",
-          "Staff Picks: Suggestion 5"
+          "What is cohabiting?",
+          "What is a conjugal relationship?",
+          "Can I apply for a work a work permit until sponsorship is finalized?",
+          "What is a common law partner?",
+          "What is a dependent?"
         ],
         "topPicks": [
           "Top Picks: Suggestion 1",

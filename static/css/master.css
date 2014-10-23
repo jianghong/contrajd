@@ -85,9 +85,9 @@ a:hover {
   color: lightgrey !important;
 }
 
-#contrajd-suggestions h5 {
-  text-align: center;
-}
+/*#contrajd-suggestions h5 {*/
+  /*text-align: center;*/
+/*}*/
 
 .contrajd-suggestion {
   color: white;
