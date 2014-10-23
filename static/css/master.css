@@ -222,3 +222,11 @@ body {
 .fa-eye {
   color: #F74C34 !important;
 }
+
+.button {
+  border-radius: 2px !important;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button).contrajd-save {
+  background-color: #F74C34 !important;
+}

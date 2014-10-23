@@ -229,28 +229,6 @@
                             </div>
                         </div>
                     </div>
-                    <div ng-controller="WalkthroughController" class="content" id="walkthrough-panel">
-                        <div class="row">
-                            <div class="large-6 columns">
-                                <ul class="left">
-                                    <li ng-show="hasBack"><a class="tiny button" ng-click="changePage('left')">Back</a></li>
-                                    <li>Step {{ currentPage + 1}} / {{ maxPages }}</li>
-                                </ul>
-                                <ul class="right">
-                                    <li ng-show="hasNext"><a class="tiny button" ng-click="changePage('right')">Next</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-6 columns">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <div ng-include="templateUrl"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="content" id="program-panel">
                         <div class="row">
                             <div class="large-6 columns">

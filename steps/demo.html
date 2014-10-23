@@ -25,9 +25,9 @@
                 <section class="top-bar-section">
                   <!-- Right Nav Section -->
                   <ul class="right">
-                      <li class="active"><a href="#">Save</a></li>
+                      <li class="active"><a href="#" class="contrajd-save">Save</a></li>
                       <li class="has-dropdown">
-                          <a href="#">Demo User</a>
+                          <a href="#">User</a>
                           <ul class="dropdown">
                               <li><a href="#">Profile Settings</a></li>
                               <li class="active"><a href="#">Sign Out</a></li>
@@ -558,12 +558,12 @@
                         <h3>Ask Watson</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="large-10 columns">
-                       <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
+                <div class="row collapse contrajd-side-watson">
+                    <div class="medium-10 columns">
+                        <input class="contrajd-input-box ng-pristine ng-untouched ng-valid" type="text" name="" placeholder="How do I immigrate to Canada?" ng-model="pickedSuggestion">
                     </div>
-                    <div class="large-2 columns">
-                        <a ng-click="askWatson(pickedSuggestion)" href="javascript:void(0);" class="button postfix">Ask</a>
+                    <div class="medium-2 columns">
+                        <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask" ng-click="askWatson(pickedSuggestion)">
                     </div>
                 </div>
                 <div class="row">
