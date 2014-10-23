@@ -22,6 +22,15 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
     }
   };
 
+  var SHOW_SUGGESTION = function() {
+    if($scope.$parent.showSuggestions && typeof $scope.$parent.showSuggestions === 'function') {
+      $scope.$parent.showSuggestions();
+      console.log("There is a parent with hideSuggestions");
+    } else {
+      console.log("No parent with hideSuggestions");
+    }
+  };
+
   clearCards();
 
   $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
@@ -45,7 +54,7 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
 
   $scope.resetQA = function() {
     clearCards();
-    HIDE_SUGGESTION();
+    SHOW_SUGGESTION();
   }
 }]);
 
