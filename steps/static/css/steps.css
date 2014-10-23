@@ -21,3 +21,7 @@
   margin-bottom: 0px;
   background-color: white;
 }
+
+#walkthrough-panel ul {
+  list-style-type: none;
+}

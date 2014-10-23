@@ -36,7 +36,11 @@ function($scope, $location, $anchorScroll) {
     setBackandNextVisiblity();
     backToTop();    
   }
-  
+
+  $scope.goToUploadTab = function() {
+    $('a[href=#upload-panel]').click();
+  }
+
   var backToTop = function() {
     $location.hash('top');
     $anchorScroll();    

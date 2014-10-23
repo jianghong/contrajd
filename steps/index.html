@@ -65,7 +65,17 @@
                     <div ng-controller="WalkthroughController" class="content" id="walkthrough-panel">
                         <div class="row">
                             <div class="large-6 columns">
-                               >>  Step {{ currentPage + 1}} / {{ maxPages }}
+                                <ul class="left">
+                                    <li ng-show="hasBack"><a class="tiny button" ng-click="changePage('left')">Back</a></li>
+                                    <li>Step {{ currentPage + 1}} / {{ maxPages }}</li>
+                                </ul>
+                                <ul class="right">
+                                    <li ng-show="hasNext"><a class="tiny button" ng-click="changePage('right')">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
                             </div>
                         </div>
                         <div class="row">
@@ -73,12 +83,9 @@
                                 <div ng-include="templateUrl"></div>
                             </div>
                         </div>
-                        <div class="walkthrough-nav">
-                            <nav role="navigation">
-                                <li ng-show="hasBack"><a ng-click="changePage('left')">Back</a></li>
-                                <li ng-show="hasNext"><a ng-click="changePage('right')">Next</a></li>
-                            </nav>
-                        </div>
+                    </div>
+                    <div class="content" id="upload-panel">
+                        <h1>Upload Documents</h1>
                     </div>
                 </div>
             </div>
@@ -95,7 +102,7 @@
                        <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
                     </div>
                     <div class="large-2 columns">
-                        <a ng-click="askWatson(pickedSuggestion)" href="#" class="button postfix">Ask</a>
+                        <a ng-click="askWatson(pickedSuggestion)" href="javascript:void(0);" class="button postfix">Ask</a>
                     </div>
                 </div>
                 <div class="row">
