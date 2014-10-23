@@ -18,6 +18,10 @@ body, #sb-site {
   color: white;
 }
 
+.contrajd-side-watson {
+  width: 90%;
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0px;
