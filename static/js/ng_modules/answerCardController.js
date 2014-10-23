@@ -68,7 +68,7 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
 
 answerCardModule.directive('myAnswers', function(){
   var answerCardTemplate = '<div class="aCard"><div class="row">' +
-                                '<div class="large-10 columns large-centered">' +
+                                '<div class="large-12 columns large-centered">' +
                                     '<div class="answer-card-container">' +
                                         '<div class="answer-card-examine">' +
                                              '<a href="javascript:void(0);" data-modal-id={{aCard.id}} onclick="toggleModal(this)">' + 
