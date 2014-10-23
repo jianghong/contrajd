@@ -88,7 +88,12 @@
                           <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
                       </ul>
                   </div>
+
                   <div class="row">
+                      <div class="medium-3 columns medium-centered">
+                          <span us-spinner="{color: '#fff'}" ng-show="isLoading"></span>
+                      </div>
+
                       <div  class="large-8 large-centered columns">
                           <div ng-repeat="answer in answerCards" my-answers="answer"></div>
                       </div>
@@ -109,6 +114,8 @@
       <script src="static/js/ng_modules/answerCardController.js"></script>
       <script src="static/js/ng_modules/services/suggestionEngineService.js"></script>
       <script src="static/js/ng_modules/suggestionEngineController.js"></script>
+      <script src="static/bower_components/spin.js/spin.js"></script>
+      <script src="static/bower_components/angular-spinner/angular-spinner.js"></script>
       <script>
         $(document).ready(function() {
             $(document).foundation();
