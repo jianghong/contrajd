@@ -17,6 +17,7 @@
 .answer-card {
   background-color: #fff;
   padding: 50px;
+  padding-right: 10px;
   height: 150px;
   width: auto;
   overflow: hidden;

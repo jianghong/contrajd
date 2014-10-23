@@ -89,11 +89,14 @@
                       </ul>
                   </div>
 
+                  <div class="row">
+                      <div class="medium-3 columns medium-centered">
+                          <span us-spinner="{color: '#fff'}" ng-show="isLoading"></span>
+                      </div>
 
-                  <div ng-repeat="answer in answerCards" my-answers="answer"></div>
-
-                  <div class="medium-3 columns medium-centered">
-                    <span us-spinner="{color: '#fff'}" ng-show="isLoading"></span>
+                      <div  class="large-8 large-centered columns">
+                          <div ng-repeat="answer in answerCards" my-answers="answer"></div>
+                      </div>
                   </div>
               </section>
           </div> <!-- AnswerCardController Ends Here -->
