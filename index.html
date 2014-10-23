@@ -97,6 +97,9 @@
         $(document).ready(function() {
             $(document).foundation();
         });
+        function toggleModal(el) {
+          $('#card-modal-' + el.dataset.modalId).foundation('reveal', 'open');
+        }
       </script>
   </body>
 </html>
