@@ -181,3 +181,7 @@ body {
     /*border-radius: 2px;*/
     /*padding: 30px !important;*/
 /*}*/
+
+.reveal-modal, dialog {
+    width: 60% !important;
+}
