@@ -230,3 +230,7 @@ body {
 .top-bar-section li:not(.has-form) a:not(.button).contrajd-save {
   background-color: #F74C34 !important;
 }
+
+.reveal-modal {
+  z-index: 9999;
+}
