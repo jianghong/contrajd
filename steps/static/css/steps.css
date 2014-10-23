@@ -1,9 +1,13 @@
+body, #sb-site {
+  background-color: #f8f8f8 !important;
+}
+
 .sb-right {
   margin-top: 45px !important;
 }
 
 .sb-slidebar {
-  background-color: #333333 !important;
+  background-color: #000 !important;
 }
 
 .watson-panel {
@@ -14,10 +18,26 @@
   color: white;
 }
 
+.contrajd-side-watson {
+  width: 90%;
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0px;
   width: 100%;
   margin-bottom: 0px;
   background-color: white;
+}
+
+#walkthrough-panel ul {
+  list-style-type: none;
+}
+
+.button {
+  border-radius: 2px !important;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button).contrajd-save {
+  background-color: #F74C34 !important;
 }

@@ -1,0 +1,161 @@
+<div class="row">
+    <h3>What is your name?</h3>
+    <form>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Given Name</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="John">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Last Name</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Smith">
+                </div>
+              </div>
+            </div>        
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <h3>When were you born?</h3>
+    <form>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Year</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="number" placeholder="1989">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Month</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="number" placeholder="10">
+                </div>
+              </div>
+            </div>      
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse postfix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Day</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="number" placeholder="31">
+                </div>
+              </div>
+            </div>        
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <h3>Where were you born?</h3>
+    <form>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Country</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="United States">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Province/State</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="California">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">City</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Los Angeles">
+                </div>
+              </div>
+            </div>
+        </div>            
+    </form>
+</div>
+
+<div class="row">
+    <div class="large-9 columns">
+        <input id="currentAddressSameasBorn" type="checkbox">
+        <label for="currentAddressSameasBorn">I currently live in the same place as where I was born</label>    
+    </div>
+</div>
+<div class="row" ng-hide="currentAddressSameasBorn">
+    <h3>Where do you currently live?</h3>
+    <form>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Country</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Value">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">Province/State</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Value">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+              <div class="row collapse prefix-radius">
+                <div class="small-3 columns">
+                  <span class="prefix">City</span>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Value">
+                </div>
+              </div>
+            </div>
+        </div>            
+    </form>
+</div>
