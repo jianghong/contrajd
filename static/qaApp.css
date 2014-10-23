@@ -11,7 +11,7 @@ a, p {
 }
 
 #contrajd-banner-large {
-    margin-top: 40px;
+    margin-top: 44px;
 }
 
 .contrajd-vertical {
@@ -61,7 +61,7 @@ a:hover {
 footer .contrajd-copyright {
     padding-left: 24px;
     margin: 6px 0 0;
-    font-size: 0.75em;
+    font-size: 0.75em !important;
     height: 50px;
     position: fixed;
     bottom: 0px;
@@ -145,7 +145,25 @@ body {
 }
 
 .contrajd-input-box, .contrajd-ask {
-    height: 40px !important;
+    height: 44px !important;
+}
+
+.contrajd-input-box {
+    -webkit-border-top-left-radius: 2px !important;
+    -webkit-border-bottom-left-radius: 2px !important;
+    -moz-border-radius-topleft: 2px !important;
+    -moz-border-radius-bottomleft: 2px !important;
+    border-top-left-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;
+}
+
+.contrajd-ask {
+    -webkit-border-top-right-radius: 2px !important;
+    -webkit-border-bottom-right-radius:2px !important;
+    -moz-border-radius-topright: 2px !important;
+    -moz-border-radius-bottomright: 2px !important;
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
 }
 
 .contrajd-background-image-overlay {
