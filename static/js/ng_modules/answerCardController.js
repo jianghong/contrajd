@@ -45,7 +45,7 @@ answerCardModule.directive('myAnswers', function(){
                                 '<div class="large-10 columns large-centered">' +
                                     '<div class="answer-card-container">' +
                                         '<div class="answer-card-examine">' +
-                                             '<a href="#" data-modal-id={{aCard.id}} onclick="toggleModal(this)">' + 
+                                             '<a href="javascript:void(0);" data-modal-id={{aCard.id}} onclick="toggleModal(this)">' + 
                                                  '<i class="fa fa-eye"></i>' +
                                               '</a>' + 
                                         '</div>' +
