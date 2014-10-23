@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     background-color: transparent;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+}
+
+a, p {
+    font-size: 16px !important;
 }
 
 #contrajd-banner-large {
@@ -102,6 +108,10 @@ footer .contrajd-copyright {
     color: white;
 }
 
+.contrajd-h4 {
+    color: white;
+}
+
 .contrajd-search-container, .contrajd-suggestion-container {
     background-color: transparent;
     border-radius: 6px;
@@ -126,12 +136,16 @@ body {
 }
 
 body {
-    background: url("img/toronto-skyline.jpg") no-repeat center center;
+    background: url("img/toronto-skyline-day.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-color: black;
+}
+
+.contrajd-input-box, .contrajd-ask {
+    height: 40px !important;
 }
 
 .contrajd-background-image-overlay {
