@@ -38,19 +38,19 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
   $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
 
   $scope.askWatson = function(question) {
-    if ($scope.isLoading) {
+    if ($scope.isLoading || !question) {
       return;
     }
+
     $scope.isLoading = true;
     clearCards();
 
     $http.get($scope.watsonRoute, {params: {q: question}}).
     success(function(data, status, headers, config) {
-    console.log(data.question.answers);
-    angular.forEach(data.question.answers, function(value, i) {
-      $scope.answerCards.push(new AnswerCard(value.id, value.text, value.confidence));
-      $scope.isLoading = false;
-    });
+      angular.forEach(data.question.answers, function(value, i) {
+        $scope.answerCards.push(new AnswerCard(value.id, value.text, value.confidence));
+        $scope.isLoading = false;
+      });
     }).
     error(function(data, status, headers, config) {
       console.error(data);
