@@ -13,6 +13,15 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
     $scope.answerCards = [];
   };
 
+  var HIDE_SUGGESTION = function() {
+    if($scope.$parent.hideSuggestions && typeof $scope.$parent.hideSuggestions === 'function') {
+      $scope.$parent.hideSuggestions();
+      console.log("There is a parent with hideSuggestions");
+    } else {
+      console.log("No parent with hideSuggestions");
+    }
+  };
+
   clearCards();
 
   $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
@@ -22,21 +31,21 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
 
     $http.get($scope.watsonRoute, {params: {q: question}}).
     success(function(data, status, headers, config) {
-     console.log(data.question.answers);
-     angular.forEach(data.question.answers, function(value, i) {
+    console.log(data.question.answers);
+    angular.forEach(data.question.answers, function(value, i) {
        $scope.answerCards.push(new AnswerCard(value.id, value.text, value.confidence));
-     });
+    });
     }).
     error(function(data, status, headers, config) {
-     console.error(data);
+    console.error(data);
     });
 
-    $scope.$parent.hideSuggestions();
+    HIDE_SUGGESTION();
   }
 
   $scope.resetQA = function() {
     clearCards();
-    $scope.$parent.showSuggestions();
+    HIDE_SUGGESTION();
   }
 }]);
 
