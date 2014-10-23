@@ -5,16 +5,16 @@ qaApp.factory('suggestionEngineService', function(){
         "staffPicks": [
           "What is cohabiting?",
           "What is a conjugal relationship?",
-          "Can I apply for a work a work permit until sponsorship is finalized?",
           "What is a common law partner?",
-          "What is a dependent?"
+          "What is a dependent?",
+          "Can I apply for a work permit until sponsorship is finalized?"
         ],
         "topPicks": [
-          "Top Picks: Suggestion 1",
-          "Top Picks: Suggestion 2",
-          "Top Picks: Suggestion 3",
-          "Top Picks: Suggestion 4",
-          "Top Picks: Suggestion 5"
+          "How do I get a start-up visa?",
+          "How do I qualify for sponsorship?",
+          "If I live in Quebec, where do I send my application?",
+          "What is the processing time for sponsorship application?",
+          "What is Canada's objectives with respect to immigration?"
         ]
       };
 
