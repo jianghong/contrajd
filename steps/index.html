@@ -222,7 +222,7 @@
                                     </form>
                                 </div>
                                 <div class="row">
-                                    <a href="#upload-panel" class="tiny button" onclick="goToTab('#program-panel')">Next</a>
+                                    <a href="javascript: void(0);" class="tiny button" onclick="goToTab('#program-panel')">Next</a>
                                 </div>                                
                             </div>
                         </div>
@@ -250,11 +250,27 @@
                         </div>
                     </div>
                     <div class="content" id="program-panel">
-                        <h1>program panel</h1>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <h3>
+                                    Based on the information you've provided you may be eligible for the following programs:
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <input type="radio" name="recommended_program" value="fsw" id="fsw"><label for="fsw">Federal Skilled Worker</label>                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <input type="radio" name="recommended_program" value="cec" id="cec"><label for="cec">Canadian Experience Class</label>                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <a href="demo.html" class="tiny button">Start</a>
+                        </div>                        
                     </div>                    
-                    <div class="content" id="upload-panel">
-                        <h1>Upload Documents</h1>
-                    </div>
                 </div>
             </div>
         </div>
@@ -294,6 +310,9 @@
             var goToTab = function(tabId) {
               $('a[href=' + tabId + ']').click();                
             }
+            function toggleModal(el) {
+              $('#card-modal-' + el.dataset.modalId).foundation('reveal', 'open');
+            }            
         </script>
     </body>
 </html>
