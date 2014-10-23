@@ -55,6 +55,7 @@ answerCardModule.directive('myAnswers', function(){
   var answerCardTemplate = '<div class="row">' +
                                 '<div class="large-10 columns large-centered">' +
                                     '<div class="answer-card-container">' +
+                                        '<div class="answer-card-examine">Examine</div>' +
                                         '<div class="answer-card">' +
                                             '<div class="answer-card-text"> {{aCard.answer}} </div>' +
                                         '</div>' +
