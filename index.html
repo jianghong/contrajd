@@ -11,84 +11,90 @@
   </head>
 
   <body ng-controller="mainController">
-
-      <nav class="top-bar" data-topbar role="navigation">
-          <ul class="title-area">
-              <li class="name">
-                  <!--<h1><a href="#">ContraJD</a></h1>-->
-              </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-          </ul>
-
-          <section class="top-bar-section">
-              <ul class="right">
-                  <li class="active"><a href="#" class="contrajd-apply">Apply</a></li>
-                  <li class="has-dropdown">
-                      <a href="#">User</a>
-                      <ul class="dropdown">
-                          <li><a href="#">Profile Settings</a></li>
-                          <li class="active"><a href="#">Sign Out</a></li>
-                      </ul>
+    <div class="contrajd-inner-body">
+          <nav class="top-bar" data-topbar role="navigation">
+              <ul class="title-area">
+                  <li class="name">
+                      <!--<h1><a href="#">ContraJD</a></h1>-->
                   </li>
+                  <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
               </ul>
-          </section>
-      </nav>
 
-      <div ng-controller="AnswerCardController">
-
-          <section id="contrajd-banner-large" >
-              <div class="row">
-                  <div class="row collapse">
-                      <div class="medium-6 columns medium-centered contrajd-search-container">
-                          <h1 class="contrajd-h1">ContraJD</h1>
-                          <div class="medium-11 columns medium-centered">
-                              <!--<h4 class="subheader contrajd-justify-text">We aim to provide you with answers regarding your immigration questions. Why don't you give us a try?</h4>-->
-                              <br>
-                          </div>
-                          <div class="row collapse">
-                              <div class="medium-11 columns">
-                                  <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
-                              </div>
-                              <div class="medium-1 columns">
-                                  <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask" ng-click="askWatson(pickedSuggestion)">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="contrajd-suggestion-engine" ng-controller="SuggestionEngineController" ng-show="isShowingSuggestion">
-
-                  <div class="contrajd-suggestion-container medium-6 columns medium-centered">
-                      <div class="row display">
-                          <div class="small-6 medium-5 columns small-centered medium-centered large-centered">
-                              <ul class="contrajd-list inline-list">
-                                  <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
-                                  <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
-                              </ul>
-                          </div>
-                      </div>
-
-                      <div class="row display">
-                          <div id="contrajd-suggestions" class="medium-5 columns medium-centered" ng-repeat="suggestion in currentSuggestions">
-                              <h5><a class='contrajd-suggestion' href='javascript:void(0);' ng-click="updateInput(suggestion)"> {{suggestion}} </a></h5>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div ng-show="!isShowingSuggestion" class="medium-3 columns medium-centered" ng-click="resetQA()">
-                  <ul class="contrajd-list">
-                      <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
+              <section class="top-bar-section">
+                  <ul class="right">
+                      <li class="active"><a href="#" class="contrajd-apply">Apply</a></li>
+                      <li class="has-dropdown">
+                          <a href="#">User</a>
+                          <ul class="dropdown">
+                              <li><a href="#">Profile Settings</a></li>
+                              <li class="active"><a href="#">Sign Out</a></li>
+                          </ul>
+                      </li>
                   </ul>
-              </div>
-              <div ng-repeat="answer in answerCards" my-answers="answer"></div>
-          </section>
-      </div> <!-- AnswerCardController Ends Here -->
+              </section>
+          </nav>
 
-      <footer>
-          <p class="contrajd-copyright">© 2014 ContraJD, Inc. All rights reserved.</p>
-      </footer>
+          <div class="contrajd-background-image-overlay"></div>
+          <div class="contrajd-background-image" ng-controller="AnswerCardController">
+
+              <section id="contrajd-banner-large" >
+                  <div class="row">
+                      <div class="row collapse">
+                          <div class="contrajd-banner-outer-container">
+                              <div class="medium-6 columns medium-centered contrajd-search-container">
+                                  <h1 class="contrajd-h1">ContraJD</h1>
+                                  <div class="medium-11 columns medium-centered">
+                                      <!--<h4 class="subheader contrajd-justify-text">We aim to provide you with answers regarding your immigration questions. Why don't you give us a try?</h4>-->
+                                      <br>
+                                  </div>
+                                  <div class="row collapse">
+                                      <div class="medium-11 columns">
+                                          <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
+                                      </div>
+                                      <div class="medium-1 columns">
+                                          <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask" ng-click="askWatson(pickedSuggestion)">
+                                      </div>
+                                  </div>
+                                  <!--<a class='contrajd-get-suggestions' href='javascript:void(0);' ng-click="revealSuggestions()">Suggestions</a>-->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="contrajd-suggestion-engine" ng-controller="SuggestionEngineController" ng-show="isShowingSuggestion">
+
+                      <div class="contrajd-suggestion-container medium-6 columns medium-centered">
+                          <div class="row display">
+                              <div class="small-6 medium-5 columns small-centered medium-centered large-centered">
+                                  <ul class="contrajd-list inline-list">
+                                      <li><a href='javascript:void(0);' id="contrajd-picks" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'staffPicks'}" ng-click="selectPick('staffPicks')">Staff Picks</a></li>
+                                      <li><a href='javascript:void(0);' id="contrajd-top" class="contrajd-segment" ng-class="{'contrajd-current': currentPick == 'topPicks'}" ng-click="selectPick('topPicks')">Top</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                          <div class="row display">
+                              <div id="contrajd-suggestions" class="medium-5 columns medium-centered" ng-repeat="suggestion in currentSuggestions">
+                                  <h5><a class='contrajd-suggestion' href='javascript:void(0);' ng-click="updateInput(suggestion)"> {{suggestion}} </a></h5>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div ng-show="!isShowingSuggestion" class="medium-3 columns medium-centered" ng-click="resetQA()">
+                      <ul class="contrajd-list">
+                          <li><a href='javascript:void(0);' id="contrajd-back-to-suggestions" class="contrajd-segment">Return to Suggestions</a></li>
+                      </ul>
+                  </div>
+                  <div ng-repeat="answer in answerCards" my-answers="answer"></div>
+              </section>
+          </div> <!-- AnswerCardController Ends Here -->
+
+          <!--<footer>-->
+              <!--<p class="contrajd-copyright">© 2014 ContraJD, Inc. All rights reserved.</p>-->
+          <!--</footer>-->
+
+      </div>
 
       <script src="static/js/vendor/jquery.js"></script>
       <script src="static/js/foundation.min.js"></script>
