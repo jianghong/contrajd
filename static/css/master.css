@@ -4,6 +4,10 @@
   height: 240px;
   overflow: hidden;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 }
 
 .answer-card {
@@ -12,4 +16,22 @@
   height: 150px;
   width: auto;
   overflow: hidden;
+}
+
+.answer-card-confidence {
+  padding: 40px;
+  padding-left: 50px;
+  float: left;
+}
+
+.answer-card-source-url {
+  padding: 40px;
+  padding-left: 50px;
+  float: right;
+}
+
+.answer-card-examine {
+  padding-right: 40px;
+  padding-top: 20px;
+  float: right;
 }
