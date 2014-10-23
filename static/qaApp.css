@@ -185,3 +185,7 @@ body {
 .reveal-modal, dialog {
     width: 60% !important;
 }
+
+.fa-eye {
+    color: #F74C34 !important;
+}
