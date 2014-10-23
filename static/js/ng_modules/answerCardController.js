@@ -35,7 +35,7 @@ answerCardModule.controller('AnswerCardController', ['$scope', '$http', function
 
   clearCards();
 
-  $scope.watsonRoute = 'http://127.0.0.1:8000/ask';
+  $scope.watsonRoute = 'http://54.69.43.163/ask';
 
   $scope.askWatson = function(question) {
     if ($scope.isLoading) {
