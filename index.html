@@ -54,7 +54,7 @@
                                           <input class="contrajd-input-box" type="text" name="" placeholder="How do I immigrate to Canada?" ng-model="pickedSuggestion">
                                       </div>
                                       <div class="medium-1 columns">
-                                          <input type="submit" href="#" class="postfix small button expand contrajd-ask" value="Ask" ng-click="askWatson(pickedSuggestion)">
+                                          <input type="submit" href="#" ng-class="{disabled: isLoading}" class="postfix small button expand contrajd-ask" value="Ask" ng-click="askWatson(pickedSuggestion)">
                                       </div>
                                   </div>
                                   <!--<a class='contrajd-get-suggestions' href='javascript:void(0);' ng-click="revealSuggestions()">Suggestions</a>-->

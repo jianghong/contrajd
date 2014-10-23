@@ -234,3 +234,8 @@ body {
 .reveal-modal {
   z-index: 9999;
 }
+
+.fa-spinner {
+  color: #F74C34 !important;
+  font-size: 25px;
+}
