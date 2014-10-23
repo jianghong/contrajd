@@ -1,3 +1,7 @@
+body, #sb-site {
+  background-color: #f8f8f8 !important;
+}
+
 .sb-right {
   margin-top: 45px !important;
 }
@@ -12,6 +16,10 @@
 
 .watson-panel h3 {
   color: white;
+}
+
+.contrajd-side-watson {
+  width: 90%;
 }
 
 .bottom-bar {
