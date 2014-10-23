@@ -35,7 +35,7 @@
                       </li>
                       <li>
                         <a href="#" class="sb-toggle-right toggle-watson">
-                            <i class="fa fa-angle-double-left"></i>
+                            <i class="fa fa-search"></i>
                         </a>
                       </li>
                   </ul>
@@ -46,7 +46,7 @@
         <div id="sb-site">
             <dl class="tabs vertical medium-2 columns" data-tab>
                 <dd class="active"><a href="#marital-status">Marital Status</a></dd>
-                <dd><a href="#spouse-martital-status">Spouse's Marital Status</a></dd>
+                <dd><a href="#spouse-info">Spouse's Info</a></dd>
                 <dd><a href="#mother-info">Mother's Info</a></dd>
                 <dd><a href="#father-info">Father's Info</a></dd>
                 <dd><a href="#review">Review</a></dd>
@@ -54,15 +54,522 @@
             </dl>
             <div class="medium-9 columns">
                 <div class="tabs-content">
-                    <div class="content active" id="martial-status">
-                        <p>This is the mother fucking intro</p>
+                    <div class="content active" id="marital-status">
                         <div class="row">
-                            <a href="#upload-panel" class="tiny button" onclick="goToTab('#personal-info-panel')">Next</a>
+                            <h3>What is your marital status?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="married" id="married_status">
+                                            <label for="married_status">Married</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="single" id="single_status">
+                                            <label for="single_status">Single</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="divorced" id="divorced_status">
+                                            <label for="divorced_status">Divorced</label>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </form>
+                        </div>                        
+                        <div class="row">
+                            <a class="tiny button" onclick="goToTab('#spouse-info')">Next</a>
                         </div>                          
+                    </div>
+                    <div class="content" id="spouse-info">
+                        <div class="row">
+                            <h3>What is your spouse's name?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Given Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="John">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Last Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Smith">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>Where was your spouse born?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Year</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="1989">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Month</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="10">
+                                        </div>
+                                      </div>
+                                    </div>      
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Day</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="31">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your spouse's martial status?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="married" id="married_status">
+                                            <label for="married_status">Married</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="single" id="single_status">
+                                            <label for="single_status">Single</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="divorced" id="divorced_status">
+                                            <label for="divorced_status">Divorced</label>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your spouse's email?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Email</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Value">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>      
+                            </form>
+                        </div>                       
+                        <div class="row">
+                            <a class="tiny button" onclick="goToTab('#mother-info')">Next</a>
+                        </div>
+                    </div>
+                    <div class="content" id="mother-info">
+                        <div class="row">
+                            <h3>What is your Mother's full name?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Given Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Mary">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Last Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Smith">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>When was your Mother born?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Year</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="1959">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Month</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="4">
+                                        </div>
+                                      </div>
+                                    </div>      
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Day</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="10">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>Where was your Mother born?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Country</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="United States">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Province/State</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="California">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">City</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Los Angeles">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>            
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your mother's martial status?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="married" id="married_status">
+                                            <label for="married_status">Married</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="single" id="single_status">
+                                            <label for="single_status">Single</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="divorced" id="divorced_status">
+                                            <label for="divorced_status">Divorced</label>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </form>    
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your Mother's email?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Email</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Value">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>      
+                            </form>
+                        </div>                        
+                        <div class="row">
+                            <a class="tiny button" onclick="goToTab('#father-info')">Next</a>
+                        </div>                        
+                    </div>
+                    <div class="content" id="father-info">
+                        <div class="row">
+                            <h3>What is your Father's full name?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Given Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Mary">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Last Name</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Smith">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>When was your Father born?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Year</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="1959">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Month</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="4">
+                                        </div>
+                                      </div>
+                                    </div>      
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse postfix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Day</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="number" placeholder="10">
+                                        </div>
+                                      </div>
+                                    </div>        
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>Where was your Father born?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Country</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="United States">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Province/State</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="California">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">City</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Los Angeles">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>            
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your Father's martial status?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="married" id="married_status">
+                                            <label for="married_status">Married</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="single" id="single_status">
+                                            <label for="single_status">Single</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <div class="small-9 columns">
+                                            <input type="radio" name="martial_status" value="divorced" id="divorced_status">
+                                            <label for="divorced_status">Divorced</label>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </form>    
+                        </div>
+
+                        <div class="row">
+                            <h3>What is your Father's email?</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                      <div class="row collapse prefix-radius">
+                                        <div class="small-3 columns">
+                                          <span class="prefix">Email</span>
+                                        </div>
+                                        <div class="small-9 columns">
+                                          <input type="text" placeholder="Value">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>      
+                            </form>
+                        </div>
+
+                        <div class="row">
+                            <a class="tiny button" onclick="goToTab('#father-info')">Next</a>
+                        </div>                        
                     </div>
                 </div>            
             </div>
         </div>
+        <div ng-controller="AnswerCardController" class="sb-slidebar sb-right sb-style-overlay sb-width-wide">
+            <div class="watson-panel">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h3>Ask Watson</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-10 columns">
+                       <input class="contrajd-input-box" type="text" name="" placeholder="For example: How do I immigrate to Canada?" ng-model="pickedSuggestion">
+                    </div>
+                    <div class="large-2 columns">
+                        <a ng-click="askWatson(pickedSuggestion)" href="javascript:void(0);" class="button postfix">Ask</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div  class="large-12 columns">
+                        <div ng-repeat="answer in answerCards" my-answers="answer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>        
 
         <script src="../static/js/vendor/jquery.js"></script>
         <script src="../static/js/foundation.min.js"></script>
