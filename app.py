@@ -1,5 +1,6 @@
 from flask import Flask, request
 import watson
+import fill_pdf
 
 try:
     from flask.ext.cors import CORS  # The typical way to import flask-cors
@@ -24,6 +25,15 @@ def post_question():
 	question = request.args.get('q', '')
 	resp = watson.ask_watson(question)
 	return (resp)
+
+# returns the url to the pdf created
+# require applicant in the data 
+# { "applicant_name" : "<name>" }
+# 
+@app.route('/pdf', methods=['POST'])
+def pdf():
+    return fill_pdf.create_pdf(request)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
