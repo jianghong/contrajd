@@ -25,30 +25,49 @@ def create_fdf(request):
 #TODO map the rest of the variables
 def generate_fields(request):
 	fields = []
-	
+
 	#applicant
-	fields.append(('IMM_5406[0].#subform[0].TextField[0]', request.form['applicant_name']))
-	fields.append(('IMM_5406[0].#subform[0].dob[0]', request.form['applicant_dob']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[1]', request.form['applicant_pob']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[2]', request.form['applicant_marital']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[3]', request.form['applicant_address']))
+	if request.form.get('applicant_name'):
+		fields.append(('IMM_5406[0].#subform[0].TextField[0]', request.form['applicant_name']))
+		fields.append(('IMM_5406[0].#subform[0].dob[0]', request.form['applicant_dob']))
+	 	fields.append(('IMM_5406[0].#subform[0].TextField[1]', request.form['applicant_pob']))
+	 	fields.append(('IMM_5406[0].#subform[0].TextField[2]', request.form['applicant_marital']))
+	 	fields.append(('IMM_5406[0].#subform[0].TextField[3]', request.form['applicant_address']))
 
 	#spouse
-	fields.append(('IMM_5406[0].#subform[0].TextField[4]', request.form['spouse_name']))
-	fields.append(('IMM_5406[0].#subform[0].dob[1]', request.form['spouse_dob']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[5]', request.form['spouse_pob']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[6]', request.form['spouse_marital']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[7]', request.form['spouse_address']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[8]', request.form['spouse_email']))
+	if request.form.get('spouse_name'):
+		fields.append(('IMM_5406[0].#subform[0].TextField[4]', request.form['spouse_name']))
+		fields.append(('IMM_5406[0].#subform[0].dob[1]', request.form['spouse_dob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[5]', request.form['spouse_pob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[6]', request.form['spouse_marital']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[7]', request.form['spouse_address']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[8]', request.form['spouse_email']))
+
+	#mother
+	if request.form.get('mother_name'):
+		fields.append(('IMM_5406[0].#subform[0].TextField[9]', request.form['mother_name']))
+		fields.append(('IMM_5406[0].#subform[0].dob[2]', request.form['mother_dob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[12]', request.form['mother_pob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[11]', request.form['mother_marital']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[10]', request.form['mother_address']))
+
+	#father
+	if request.form.get('father_name'):
+		fields.append(('IMM_5406[0].#subform[0].TextField[13]', request.form['father_name']))
+		fields.append(('IMM_5406[0].#subform[0].dob[3]', request.form['father_dob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[16]', request.form['father_pob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[15]', request.form['father_marital']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[14]', request.form['father_address']))
 
 	#children
-	fields.append(('IMM_5406[0].#subform[0].TextField[17]', request.form['child_name']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[18]', request.form['child_relationship']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[19]', request.form['child_pob']))
-	fields.append(('IMM_5406[0].#subform[0].dob[4]', request.form['child_dob']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[20]', request.form['child_marital']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[21]', request.form['child_address']))
-	fields.append(('IMM_5406[0].#subform[0].TextField[62]', request.form['child_email']))
+	if request.form.get('child_name'):
+		fields.append(('IMM_5406[0].#subform[0].TextField[17]', request.form['child_name']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[18]', request.form['child_relationship']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[19]', request.form['child_pob']))
+		fields.append(('IMM_5406[0].#subform[0].dob[4]', request.form['child_dob']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[20]', request.form['child_marital']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[21]', request.form['child_address']))
+		fields.append(('IMM_5406[0].#subform[0].TextField[62]', request.form['child_email']))
 	return fields
 
 
